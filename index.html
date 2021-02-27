@@ -23,10 +23,22 @@
         console.log(e);
       });
     </script>
-    -->
     <script>
       var btns = document.querySelectorAll('button');
       var clipboard = new ClipboardJS(btns);
+
+      clipboard.on('success', function (e) {
+        console.log(e);
+      });
+
+      clipboard.on('error', function (e) {
+        console.log(e);
+      });
+    </script>
+    -->
+    <script>
+      var btn = document.getElementById('btn');
+      var clipboard = new ClipboardJS(btn);
 
       clipboard.on('success', function (e) {
         console.log(e);
@@ -75,7 +87,7 @@
       <div class="input-group mb-3">
         <input name="input" class="form-control" id="sn" placeholder="Serial number" readonly="readonly">
         <span class="input-group-btn">
-           <button type="button" class="btn btn-primary" data-clipboard-target="#sn">
+           <button type="button" class="btn" data-clipboard-target="#sn">
              <img class="clippy" src="clippy.svg" width="13" alt="Copy to clipboard">
            </button> 
         </span>
@@ -83,7 +95,7 @@
       <div class="input-group mb-3">
         <input name="input" class="form-control" id="mac" placeholder="MAC Address" readonly="readonly">
         <span class="input-group-btn">
-          <button type="button" class="btn btn-primary" data-clipboard-target="#mac">
+          <button type="button" class="btn" data-clipboard-target="#mac">
             <img class="clippy" src="clippy.svg" width="13" alt="Copy to clipboard">
           </button>
         </span>
