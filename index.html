@@ -11,8 +11,22 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
     <script src="script.js"></script>
+    <!--
     <script>
       var clipboard = new ClipboardJS('.btn');
+
+      clipboard.on('success', function (e) {
+        console.log(e);
+      });
+
+      clipboard.on('error', function (e) {
+        console.log(e);
+      });
+    </script>
+    -->
+    <script>
+      var btns = document.querySelectorAll('button');
+      var clipboard = new ClipboardJS(btns);
 
       clipboard.on('success', function (e) {
         console.log(e);
