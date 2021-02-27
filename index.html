@@ -52,7 +52,7 @@
   <body>
     <div class="container" style="text-align:center">
       <h2 style="color: #006699;">Synology NAS number</h2>
-      <select class="form-control mb-3" onchange="selectOnchang(this)" name="model" id="model">
+      <select class="form-control mb-1" onchange="selectOnchang(this)" name="model" id="model">
         <option value="LW">DS3615xs</option>
         <option value="OD">DS3617xs</option>
         <option value="NJ">DS716+</option>
@@ -84,18 +84,18 @@
         <option value="QH">RX418</option>
         <option value="QG">RT2600ac</option>
       </select>
-      <div class="input-group mb-3">
+      <div class="input-group mb-1">
         <input name="input" class="form-control" id="sn" placeholder="Serial number" readonly="readonly">
-        <span class="input-group-btn input-group-addon">
-           <button type="button" class="btn" data-clipboard-target="#sn">
+        <span class="input-group-btn">
+           <button type="button" class="btn btn-light btn-outline-secondary" data-clipboard-target="#sn">
              <img class="clippy" src="clippy.svg" width="13" alt="Copy to clipboard">
            </button> 
         </span>
       </div>
-      <div class="input-group mb-3">
+      <div class="input-group mb-1">
         <input name="input" class="form-control" id="mac" placeholder="MAC Address" readonly="readonly">
-        <span class="input-group-btn input-group-addon">
-          <button type="button" class="btn" data-clipboard-target="#mac">
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-light btn-outline-secondary" data-clipboard-target="#mac">
             <img class="clippy" src="clippy.svg" width="13" alt="Copy to clipboard">
           </button>
         </span>
