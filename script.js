@@ -5,7 +5,7 @@ $(function () {
         $("#mac").val(generateSerial2($("#model").val()));
     });
 	
-    $.getJSON("synology_new.json", function(json) {
+/*    $.getJSON("synology_new.json", function(json) {
 
         $("#model").empty();
         $("#model").append($('<option>').text("Select model"));
@@ -13,8 +13,7 @@ $(function () {
         $.each(json, function(i, obj){
             $("#model").append($('<option>').text(obj.model).attr('value', obj.permanent));
         });
-    });
-
+    }); */
 });
 
 function generateSerial2(permanent) {
