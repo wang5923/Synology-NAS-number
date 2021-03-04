@@ -1,67 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Synology NAS number</title>
+    <title>Synology NAS number calculator</title>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
-    <!--link href="style.css" rel="stylesheet"-->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
     <script src="script.js"></script>
-    <!--
-    <script>
-      var clipboard = new ClipboardJS('.btn');
-
-      clipboard.on('success', function (e) {
-        console.log(e);
-      });
-
-      clipboard.on('error', function (e) {
-        console.log(e);
-      });
-    </script>
-    <script>
-      var btns = document.querySelectorAll('button');
-      var clipboard = new ClipboardJS(btns);
-
-      clipboard.on('success', function (e) {
-        console.log(e);
-      });
-
-      clipboard.on('error', function (e) {
-        console.log(e);
-      });
-    </script>
-    <script>
-      var btn = document.getElementByClassName('btn');
-      var clipboard = new ClipboardJS(btn);
-
-      clipboard.on('success', function (e) {
-        console.log(e);
-      });
-
-      clipboard.on('error', function (e) {
-        console.log(e);
-      });
-    </script>
-    <script>
-      var clipboard = new ClipboardJS('.btn');
-      clipboard.on('success', function (e) {
-        console.log(e);
-      });
-      clipboard.on('error', function (e) {
-        console.log(e);
-      });
-    </script>
-    -->
   </head>
   <body>
     <div class="container" style="text-align:center">
-      <h2 style="color: #006699;">Synology NAS number</h2>
-      <select class="form-control mb-1" name="model" id="model"> <!--onchange="selectOnchang(this)" name="model" id="model"-->
+      <h2 style="color: #006699;">Synology NAS number calculator</h2>
+      <select class="form-control mb-1" name="model" id="model">
         <option value="LW">DS3615xs</option>
         <option value="OD">DS3617xs</option>
         <option value="NJ">DS716+</option>
@@ -94,7 +47,7 @@
         <option value="QG">RT2600ac</option>
       </select>
       <div class="input-group mb-1">
-        <input name="input" class="form-control" id="sn" placeholder="Serial number" value="test">
+        <input name="input" class="form-control" id="sn" placeholder="Serial number">
         <span class="input-group-btn">
            <button type="button" class="btn btn-light btn-outline-secondary" data-clipboard-action="copy" data-clipboard-target="#sn">
              <img class="clippy" src="clippy.svg" width="13" alt="Copy to clipboard">
@@ -114,10 +67,10 @@
     <script>
       var clipboard = new ClipboardJS('.btn');
       clipboard.on('success', function (e) {
-      console.log(e);
+        console.log(e);
       });
       clipboard.on('error', function (e) {
-      console.log(e);
+        console.log(e);
       });
     </script>
   </body>
