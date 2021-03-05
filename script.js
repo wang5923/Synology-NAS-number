@@ -5,26 +5,17 @@ $(function () {
         $("#mac").val(generateSerial2($("#model").val()));
     });
 	
-/*    $.getJSON("synology_new.json", function(json) {
-
-        $("#model").empty();
-        $("#model").append($('<option>').text("Select model"));
-
-        $.each(json, function(i, obj){
-            $("#model").append($('<option>').text(obj.model).attr('value', obj.permanent));
-        });
-    }); */
 });
 
 function generateSerial2(permanent) {
-    if(permanent == "mac")
-        return "Please select a model first!";
+  //  if(permanent == "mac")
+ //       return "Please select a model first!";
     return "001132" + random(10, 16777215).toString(16).toUpperCase();
 }
 
 function generateSerial(permanent) {
-    if(permanent == "Select model")
-        return "Please select a model first!";
+ //   if(permanent == "Select model")
+ //       return "Please select a model first!";
 
     return (random(11,18) +padLeft(random(3,6),1)+"0" + permanent + "n" + padLeft(random(1,030000),6)).toUpperCase();
 }
