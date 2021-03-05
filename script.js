@@ -1,22 +1,17 @@
 $(function () {
 
     $("#generate").click(function () {
-        $("#sn").val(generateSerial($("#model").val()));
-        $("#mac").val(generateSerial2($("#model").val()));
+        $("#sn").val(generateSerial($("#model").val())); //serial number
+        $("#mac").val(generateSerial2($("#model").val())); //mac address
     });
 	
 });
 
 function generateSerial2(permanent) {
-  //  if(permanent == "mac")
- //       return "Please select a model first!";
     return "001132" + random(10, 16777215).toString(16).toUpperCase();
 }
 
 function generateSerial(permanent) {
- //   if(permanent == "Select model")
- //       return "Please select a model first!";
-
     return (random(11,18) +padLeft(random(3,6),1)+"0" + permanent + "n" + padLeft(random(1,030000),6)).toUpperCase();
 }
 
