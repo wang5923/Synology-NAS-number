@@ -1,18 +1,18 @@
 $(function () {
 
     $("#generate").click(function () {
-        $("#sn").val(generateSerial($("#model").val())); //serial number
-        $("#mac").val(generateMACAddress()); //$("#model").val())); //mac address
+        $("#sn").val(generateSN($("#model").val())); //serial number
+        $("#mac").val(generateMAC()); //mac address
     });
 	
 });
 
-function generateMACAddress() {
+function generateMAC() {
     return "001132" + random(10, 16777215).toString(16).toUpperCase();
 }
 
-function generateSerial(permanent) {
-    return (random(11,18) +padLeft(random(3,6),1)+"0" + permanent + "n" + padLeft(random(1,030000),6)).toUpperCase();
+function generateSN(model) {
+    return (random(11,18) +padLeft(random(3,6),1)+"0" + model + "n" + padLeft(random(1,030000),6)).toUpperCase();
 }
 
 function padLeft(nr, n) {
