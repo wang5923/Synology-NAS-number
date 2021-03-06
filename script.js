@@ -2,12 +2,12 @@ $(function () {
 
     $("#generate").click(function () {
         $("#sn").val(generateSerial($("#model").val())); //serial number
-        $("#mac").val(generateSerial2($("#model").val())); //mac address
+        $("#mac").val(generateMACAddress()); //$("#model").val())); //mac address
     });
 	
 });
 
-function generateSerial2(permanent) {
+function generateMACAddress() {
     return "001132" + random(10, 16777215).toString(16).toUpperCase();
 }
 
