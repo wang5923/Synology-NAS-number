@@ -64,24 +64,24 @@
       </div>
       <button id="generate" type="button" class="btn btn-primary">Generate</button>
     </div>
-    <input id="cbjsdebug" />
+    <!--input id="cbjsdebug" /-->
     <script>
       var clipboard = new ClipboardJS('.btn');
       clipboard.on('success', function (e) {
-        //console.log(e);
-        str="";
-        for (var item in e){
-          ste +=item+":"+e[item]+"\n";
-        };
-        $("#cbjsdebug").val(str);
+        console.log(e);
+        //str="";
+        //for (var item in e){
+        //  ste +=item+":"+e[item]+"\n";
+        //};
+        //$("#cbjsdebug").val(str);
       });
       clipboard.on('error', function (e) {
-        //console.log(e);
-        str="";
-        for (var item in e){
-          str +=item+":"+e[item]+"\n";
-        };
-        $("#cbjsdebug").val(str);
+        console.log(e);
+        //str="";
+        //for (var item in e){
+        //  str +=item+":"+e[item]+"\n";
+        //};
+        //$("#cbjsdebug").val(str);
         alert("Please use Ctrl-C to copy.");
       });
     </script>
