@@ -53,7 +53,7 @@
       <div class="input-group mb-1">
         <input name="input" class="form-control" id="sn" placeholder="Serial number" readonly>
         <span class="input-group-btn">
-           <button type="button" class="btn btn-light btn-outline-secondary" data-clipboard-action="copy" data-clipboard-target="#sn">
+           <button type="button" id="sncopy" class="btn btn-light btn-outline-secondary" data-clipboard-action="copy" data-clipboard-target="#sn" title="Info" data-container="body" data-placement="bottom" data-content="Please use Ctrl-C to copy.">
              <img class="clippy" width="13" alt="Copy">
            </button> 
         </span>
@@ -61,7 +61,7 @@
       <div class="input-group mb-1">
         <input name="input" class="form-control" id="mac" placeholder="MAC Address" readonly>
         <span class="input-group-btn">
-          <button type="button" class="btn btn-light btn-outline-secondary" data-clipboard-action="copy" data-clipboard-target="#mac">
+          <button type="button" id="maccopy" class="btn btn-light btn-outline-secondary" data-clipboard-action="copy" data-clipboard-target="#mac" title="Info" data-container="body" data-placement="bottom" data-content="Please use Ctrl-C to copy.">
             <img class="clippy" width="13" alt="Copy">
           </button>
         </span>
@@ -76,7 +76,12 @@
       });
       clipboard.on('error', function (e) {
         console.log(e);
-        alert("Please use Ctrl-C to copy.");
+        $("#sncopy").click(function () { 
+          $("sncopy").popover();
+        });
+        $("#maccopy").click(function () {
+          $("maccopy").popover();
+        });
       });
     -->
     </script>
