@@ -69,14 +69,14 @@
     </div>
     <script>
     <!--
-      //$("#copyfail").alert('close');
+      $("#copyfail").alert('close');
       var clipboard = new ClipboardJS('.btn');
       clipboard.on('success', function (e) {
         console.log(e);
       });
       clipboard.on('error', function (e) {
         console.log(e);
-        $("#copyfail").alert('close');
+        $("#copyfail").alert();
       });
     -->
     </script>
